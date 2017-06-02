@@ -1,0 +1,109 @@
+%=============================================================================
+\section{Traceability Methoden, Techniken und Anwendungen}
+%=============================================================================
+\subsection{Methoden}
+\subsubsection{Traceability Schemas \& Metamodelle}
+\begin{itemize}
+
+\item
+Regeln zur Aufnahme von \textit{traceability} Informationen
+
+\item
+Schemas vs. Metamodelle:
+\begin{itemize}
+\item
+\textbf{Schemas:} haupsächlich informale Regeln zur manuellen Aufnahme von \textit{traceability} Information in SE und RE
+\item
+\textbf{Metamodelle:} Schemas formalisiert als Metamodellen in MDE
+\end{itemize}
+
+\end{itemize}
+
+\paragraph{Traceability link types.}
+asdf
+
+
+\subsubsection{Traceability (link) Matrizen}
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|}
+\hline
+& A1 & A2 & A3 &  A4 
+\\\hline\hline
+A1 &  & $\times$  &  &   
+\\\hline
+A2 &  &  & $\times$  &   
+\\\hline
+A3 & $\times$ &  &  &   
+\\\hline
+A4 &  &  &  &  $\times$
+\\\hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+
+\item
+2D Visualisierung von \textit{traceability links} zwischen Artefakten
+
+\item
+Unhandlich für große Anzahlen von Artefakten
+
+\item
+Ursprünglich nur Darstellung der Existenz ($\times$) von \textit{traceability links}. Kann aber mit anderen Formen erweitert werden (z.B. $\triangleleft , \triangleright , \bullet ,$ etc.)
+
+\end{itemize}
+
+\subsubsection{Traceability Cross-Refrences}
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+A1 & Lorem ipsum ... & \begin{minipage}[t]{0.1\textwidth}
+$\triangleleft$ A2
+\\$\triangleright$ A3
+\\...\\
+\end{minipage} 
+\\\hline
+A2 & Lorem ipsum ... & \begin{minipage}[t]{0.1\textwidth}
+$\triangleleft$ A3
+\\$\triangleright$ A3
+\\...\\
+\end{minipage} 
+\\\hline 
+A3 & Lorem ipsum ... & \begin{minipage}[t]{0.1\textwidth}
+$\triangleleft$ A1
+\\$\triangleright$ A2
+\\...\\
+\end{minipage} 
+\\\hline
+\end{tabular}
+($\triangleleft \approx$ in, $\triangleright \approx$ out)
+\end{center}
+\begin{itemize}
+
+\item
+tabellarische Darstellung von \textit{traceability links} als Artefakt-Metadaten
+
+\end{itemize}
+
+\subsubsection{Traceability Graphen}
+\begin{itemize}
+
+\item
+intuitive graphische Notation
+\begin{itemize}
+\item Knoten $\approx$ Artefakte
+\item Kanten $\approx$ \textit{traceability links}
+\end{itemize}
+
+\item
+üblicherweise definiert in Metamodellen
+
+
+\end{itemize}
+
+%=============================================================================
+\subsection{Techniken}
+%=============================================================================
+\subsection{Anwendungen}
+%=============================================================================

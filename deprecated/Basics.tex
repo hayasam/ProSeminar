@@ -1,0 +1,29 @@
+
+\section{Basics of traceability}\label{subsec:Basics.Traceability}
+Historically the research on traceability in software engineering originates from requirement engineering (RE). The question is: given a discrete set of requirements, how can one validate or even prove that all requirements are met? And more importantly on what information can one base such validation? 
+
+The idea to solve this problem came through observation on typical product development processes where a raw vision is transformed to concrete requirements, requirements are transformed to architecture and architecture is transformed to a final implementation. Due to the incremental and iterative nature of such processes it is reasonable to assume that engineering activities might leave \textit{traces} which reflect the performed activity and the past state of the modified artifact.
+
+Later traceability became of more interest to the MDE community. The purpose of traceability here does not much differ from its purpose in requirement or software engineering. We just change our perspective on how we see and describe engineering processes. Usually we try to regard artifacts as models of some kind at best specified by meta-models, and activities are seen as also well defined model-transformations. On top of that MDE is strongly interested in the automation of engineering processes.
+
+Winkler and von Pilgrim compiled a complete survey on traceability where origins and differences in both fields  can be explored in more detail \cite{TraceabilitySurvey}. This section is strongly based on their work.
+
+\subsection{Traceability definitions}
+Traceability is subject of various research fields, hence there is no standard definition on what traceability actually is. The introductory citation is from Lago et al. \cite{ScopedTraceability} and states the following: \textit{''Traceability is the ability to describe and follow the life of a software artifact and a means for modeling the relations between software artifacts in an explicit way''} . This definition is a good starting point if one wants to grasp what traceability is about because it is based on the life-cycle of artifacts and their relationships which has a nice intuitive notion. However one weakness is that it is not clear whose ability it should be. Other more technical definitions of traceability are given by the IEEE \cite{IEEEGlossary}:
+\begin{enumerate}
+\item 
+\label{IEEEDef1}
+\textit{The degree to which a relationship can be established between two or more products of the development process, especially products having a predecessor-successor or master-subordinate relationship to one another.}
+\item 
+\label{IEEEDef2}
+\textit{The degree to which each element in a software development products establishes its reason for existing.}
+\end{enumerate}
+Here, traceability is not seen as an ambiguous ability, on the contrary it is stated as a hopefully measurable degree of relationships. Moreover in definition \ref{IEEEDef2} product elements are made accountable for their own traceability.
+
+\subsubsection{traces \& traceability links}
+Vital to traceability is the idea that engineering activities leave traces.
+
+\subsection{Traceability objectives.}
+
+
+

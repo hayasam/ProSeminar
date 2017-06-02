@@ -1,0 +1,42 @@
+\section{GMM4SA}
+
+\begin{verbatim}
+ADElement
+ArichtectureDecision
+ArchitectureDescription
+ArchitectureFramework
+ArchitectureModel
+ArchitectureRelationale
+ArchitectureView
+ArchitectureViewpoint
+Convention
+Correspondence
+CorrespondenceRule
+Document
+ModelKind
+Stakeholder
+SystemConcern
+
+//===================================================
+
+ArichtectureDecision dependsOn ArichtectureDecision
+ArichtectureDecision justifiedBy ArchitectureRelationale
+ArichtectureDecision pertainsTo SystemConcern
+ArichtectureDecision raises SystemConcern
+ArichtectureDecision affects ADElement
+
+//===================================================
+
+ArchitectureDescription identifies Stakeholder
+ArchitectureDescription addresses SystemConcern
+ArchitectureDescription offers ArchitectureRelationale
+
+//===================================================
+
+ArchitectureRelationale justifies ArichtectureDecision
+
+//===================================================
+
+ArchitectureView models ArchitectureModel
+
+\end{verbatim}

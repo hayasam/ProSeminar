@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_of2-MASqEeSQtZ98nwPCUQ" name="NewModel">
+  <packagedElement xmi:type="uml:Class" xmi:id="_rtWN4ASqEeSQtZ98nwPCUQ" name="MegaModel">
+    <generalization xmi:id="_fiiocASrEeSQtZ98nwPCUQ" general="_YMyi4ASrEeSQtZ98nwPCUQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_tQ4dMASqEeSQtZ98nwPCUQ" name="Model">
+    <generalization xmi:id="_dQVVQASrEeSQtZ98nwPCUQ" general="_YMyi4ASrEeSQtZ98nwPCUQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OUBG8ASrEeSQtZ98nwPCUQ" name="MetaModel">
+    <generalization xmi:id="_d7PTcASrEeSQtZ98nwPCUQ" general="_YMyi4ASrEeSQtZ98nwPCUQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_T0ee0ASrEeSQtZ98nwPCUQ" name="ModelElement">
+    <generalization xmi:id="_eglcMASrEeSQtZ98nwPCUQ" general="_YMyi4ASrEeSQtZ98nwPCUQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_YMyi4ASrEeSQtZ98nwPCUQ" name="BroadSenseModel" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_igBtQASrEeSQtZ98nwPCUQ" name="megaModel" memberEnd="_igBtQQSrEeSQtZ98nwPCUQ _igC7YQSrEeSQtZ98nwPCUQ" navigableOwnedEnd="_igC7YQSrEeSQtZ98nwPCUQ">
+    <ownedEnd xmi:id="_igBtQQSrEeSQtZ98nwPCUQ" name="megaModel" type="_rtWN4ASqEeSQtZ98nwPCUQ" aggregation="composite" association="_igBtQASrEeSQtZ98nwPCUQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_igCUUASrEeSQtZ98nwPCUQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_igC7YASrEeSQtZ98nwPCUQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_igC7YQSrEeSQtZ98nwPCUQ" name="models" type="_YMyi4ASrEeSQtZ98nwPCUQ" association="_igBtQASrEeSQtZ98nwPCUQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_igEJgASrEeSQtZ98nwPCUQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_igEJgQSrEeSQtZ98nwPCUQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

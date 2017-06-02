@@ -1,0 +1,125 @@
+\section{Ansätze in den gegeben Materialien}
+
+\paragraph{Materiaien}
+\begin{itemize}
+\item
+\textbf{Material \ref{resrc:2}}
+\item
+\textbf{Material \ref{resrc:3}}
+\item
+\textbf{Material \ref{resrc:4}}
+\end{itemize}
+
+
+
+%======================================================================
+
+\subsection{Architecture frameworks (M. \ref{resrc:3})}
+\begin{itemize}
+
+
+\item
+Erstellen von \textit{Architecture frameworks} als wiederverwendbare Megamodelle mittels \textit{MEGAF} bestehend aus:
+\begin{itemize}
+\item \textit{Viewpoints},
+\item \textit{System Concerns},
+\item \textit{Model Kinds} (Metamodelle),
+\item \textit{Stakeholders},
+\item und \textit{Correspondence Rules}
+\end{itemize}
+
+\item
+\textit{Architecture frameworks} beschreiben wie eine konkrete Architektur zur modelieren ist
+
+
+\item
+\textbf{Kein expliziter Ansatz zu \textit{Traceability}}
+
+\item
+Mittels \textit{Model Kinds} und \textit{correspondence Rulse} können konkrete \textit{Traceability}-Modelle wiederverwendbar spezifiziert werden
+
+\end{itemize}
+
+%======================================================================
+
+\subsection{Dynamic hierarchical mega models (M. \ref{resrc:2})}
+\begin{itemize}
+
+\item 
+
+\end{itemize}
+
+%======================================================================
+
+\subsection{Linguistic architectures (M. \ref{resrc:4})}
+\begin{itemize}
+
+\item
+MDE-Ansatz: Automatisierte \textit{Traceability}-Analyse.
+
+\item
+Materialspezifischer Ansatz: \textit{''Ersetze UML durch DSL''}
+
+\item
+(Mega-)Modelle werden einer DSL (\textit{MegaL}) beschrieben.
+\begin{itemize}
+\item
+Megamodelle beschreiben hier den \textbf{Ist}-Zustand eines Systems (im Gegensatz zur üblichen MDE-Praxis, den Zustand eines zukünftigen Systems zu beschreiben)
+\item
+Metamodelle/Schemas werden häufig durch (Programmier-)Sprachen ersetzt.
+\item
+Einheiten in \textit{MegaL} werden durch URIs auf physisch existierende Artefakte abgebildet. (URIs bilden bis zur Inhaltsebene von Dateien ab, z.B. kann eine URI auf eine Metode innerhalb einer Klasse innerhalb einer Datei zeigen.)
+
+\item
+Relationen in \textit{MegaL} werden durch designierte Programme (\textit{''tools''}) evaluiert.
+\end{itemize}
+
+\item
+\textit{Traceability Links} entstehen als Nebenprodukt von Relationsevaluierungen.
+
+\item
+\textit{Traceability Links} als 1-zu-1-Abbildung einer Regel-URI auf eine Ressource-URI (wobei die angegbene Regel ebenfalls als physikalische Ressource existiert)
+
+\item
+Bensoders interessant zur automatischen Spurgewinnung in Generierungs- und Kompilierungsprozessen, die auf diskreten semantischen Regeln basieren und gewisse Annahmen als erfüllt angesehen werden können.  
+\newline
+\textbf{Beispiel:}
+Eine Java \texttt{.class}-Datei ist das Produkt der Kompilierung der korrespondierenden \texttt{.java}-Datei. Nach erfolgreicher Kompilierung kann angenommen werden, dass die \texttt{.class}- und die \texttt{.java}-Datei Element der (\textit{elementOf}-Relation) Java-Sprache sind. Gleichzeitig kann ebenfalls angenomen werden, dass die \texttt{.class}-Datei konform zur (\textit{conformsTo}-Relation) \texttt{.java}-Datei ist, dass die \texttt{.java}-Datei konform zur Java-Grammatik ist und dass die enthaltene Klasse und ihre Methoden konform zu den entsprechenden Grammatikregeln sind.  
+\newline
+\textbf{Anmerkung:}
+\textbf{Obiges Beispiel ist trivial und beschreibt lediglich den Java- Kompilierungsprozess, der den meisten Softwareentwicklern vertraut sein sollte. Ist man allerdings in der Lage kontextspezifischere Regeln zu formulieren und zu beschreiben wie diese auf die Java-Regeln abgebildet werden, ist die Informationsgewinnung ungleich höher einzuschätzen.}
+
+\end{itemize}
+
+%======================================================================
+
+\subsection{Megamodels at Runtime (M. \ref{resrc:5})}
+\subsubsection{Runtime Model}
+\begin{itemize}
+
+\item
+Runtime $\approx$ Execution-time
+
+\item
+Phase im Software Lebenszyklus
+
+\item
+Instanzen von Metamodellen (diese sind wiederum Instanzen von Meta-Metamodellen, etc.)
+
+\end{itemize}
+
+\subsubsection{Runtime Model Kategorien}
+\begin{itemize}
+
+\item
+\textit{Implementation Models} [Impl.Models]
+\item
+\textit{Configuration \& Architectural Models} [Conf+Arch.Models]
+\item
+\textit{Context \& Resource Models} [Cxt+Rsrc.Models]
+\item
+\textit{Configuration Space \& Variability Models} [ConfSpace+Var Models]
+\item
+\textit{Rules, Strategies, Constraints, Requirements and Goals} [RSCRGs]
+
+\end{itemize}

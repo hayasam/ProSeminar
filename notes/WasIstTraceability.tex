@@ -1,0 +1,234 @@
+\section{Was ist Traceability in MDE und Softwararchitektur?}
+
+\textbf{Materiaien}
+\begin{itemize}
+
+\item
+\textbf{Material \ref{resrc:1}}
+
+\end{itemize}
+
+%======================================================================
+
+\subsection{Traceability}
+\begin{itemize}
+
+\item
+\textit{Traceability} $\approx$ Verfolgbarkeit
+
+\item
+Keine einheitliche Definition, da der Begriff \textit{traceability} in verschiedenen Forschungsgebieten Verwendung findet.
+
+\item
+Intuitives Verständnis (bzgl. Software): 
+\newline
+\textit{''... the ability to describe and follow the life of
+software artifacts ...''} (M.\ref{resrc:1}, S. 529)
+\newline
+\textit{''... Die Fähigkeit das Leben eines Software-Artefakts zu beschreiben und zu verfolgen ...''}
+\newline
+(Kann jedoch aufgrund der Allgmeinheit auch auf andere Software-gestützte Entwicklungsprozesse neben der Software-Entwicklung angewandt werden, z.B. Projektmangement)
+
+\item
+Ursprüngliche (historisch erste) Verwendung im Anforderungsmanagement (RE $=$ Requirements Engineering)
+
+\item
+\textit{traceability} als Qualitätsmerkmal wegen der oft inkrementellen und iterativen Natur eines Software-Herstellungsprozesses:
+\begin{center}
+
+Vision
+$\rightarrow$
+Anforderungen
+$\rightarrow$
+Architektur/Modelle
+$\rightarrow$
+Code \& Tests
+\newline
+parallel dazu: Dokumentation
+
+\end{center}
+Elemente dieser Phasen sind untereinander Verbunden und begründen einander (\textbf{Verifizierung \& Validierung});z.B. geänderte oder neue Anforderungen führen zu Änderungen oder Erweiterungen in Folgephasen. (M. \ref{resrc:1}, S. 531)
+
+\item
+\textit{traceability} im IEEE Standard Glossary of Software Engineering Terminologoy:
+\begin{enumerate}
+\item 
+\textit{The degree to which a relationschip can be established between two or more products of the development process, especially products having a predecessor-successor or master-subordinate relationship to one another.}
+\item
+\textit{The degree to which each element in a software development product establishes its reason for existing.}
+\end{enumerate}
+(M. \ref{resrc:1}, S. 531)
+
+
+\end{itemize}
+
+%======================================================================
+
+\subsubsection{traces \& traceability links}
+\begin{itemize}
+
+\item 
+\textit{trace} $\approx$ Spur
+
+\item
+\textit{traceability} impliziert, dass Änderungen und Erweiterungen \textit{traces} (Spuren) hinterlassen, z.B. \texttt{commit} in der Versionskontrolle. Änderungen zeigen allerdings auch eine zugrunde liegende Idee, die sich u.U. in informalen Gesprächen mit Stakeholdern begründet. Solche Gespäche können auch als Spuren betrachtet werden, die sich allerdings nur schwerlich dokumentieren lassen.
+
+\item
+\textit{trace} im IEEE Standard Glossary of Software Engineering Terminologoy:
+\begin{enumerate}
+\item
+\textit{A record of the execution of a computer program, showing the sequence of
+instructions executed, the names and values
+of variables, or both. Types include execution trace, retrospective trace, subroutine
+trace, symbolic trace, variable trace.}
+\item
+\textit{To produce a record as in (1).}
+\item
+\textit{To establish a relationship between two or
+more products of the development process;
+for example, t o establish the relationship
+between a given requirement and the design
+element that implements that requirement.}
+\end{enumerate}
+
+\item
+Funktionale und nichtfunktionale Spuren nach Pinheiro (M. \ref{resrc:1}, S. 532):
+\begin{itemize}
+\item 
+\textbf{Funktionale Spuren:}
+Funktionale Spuren entstehen als Nebenprodukt einer Transformation von einem Artefakt zu einem anderen. Solche Transformationen werden entweder automatisch oder händisch durchgeführt, unterliegen jedoch einer genau definierten Regel.
+\item
+\textbf{Nichtfunktionale Spuren:}
+Nichtfunktionale Spuren entstehen als Nebenprodukt meist kreativer Prozesse, z.B. formalisierung des Protokols eines Kundeninterviews. Solche Spuren umfassen \textit{''... reason, context, descision and technical ...''} Aspekte. Im Protokolbeispiel begründen sie die Art der gewählten Formalisierung.
+\end{itemize}
+
+\item
+\textit{traceability links}. (M. \ref{resrc:1}, S. 532)
+\newline
+Spuren können teils als Metadaten und teils als Beziehungen zwischen Stakeholdern und Artefakten oder Artefakten und anderen Artefakten vorkommen. Spuren in form von Beziehungen werden \textit{traceability links} genannt; vgl. IEEE Glossary Eintrag Punkt 3. 
+\newline
+\textbf{Achtung}: \textit{traceability links} sind entweder uni- oder bi-direktional. Dennoch lassen sie sich in alle Richtungen verfolgen.
+
+\end{itemize}
+
+%======================================================================
+
+\subsection{traceability in Softwarearchitektur}
+\begin{itemize}
+
+
+\item Im Fall von Anforderungsmanagement: Die Fähigkeit Spuren von und zu Anforderungen zu verfolgen. (M. \ref{resrc:1}, S. 532)
+
+\item 
+Nach Gotel und Finkelstein: 
+\textit{''... the ability to describe and follow the life of a requirement, in both a forwards and backwards direction (i.e., from its origins, through its development and specification, to its subsequent deployment and use, and through periods of on-going refinement and iteration in any of these phases).''} (M. \ref{resrc:1}, S. 532)
+
+\item
+\textit{pre-RS \& post-RS traceability} nach Gotel und Finkelstein (M. \ref{resrc:1}, S. 532)
+\\RS $=$ Requirement Specification
+\begin{itemize}
+\item 
+\textit{pre-RS traceability}.
+Betrifft Spuren die während der Anforderungserhebung entstehen. Häufig Spuren die informale Kommunikation betreffen.
+\item 
+\textit{post-RS traceability}.
+Betrifft Spuren die während der Implementierung der Anforderungen in Architektur und Code entstehen.
+\end{itemize}
+
+\item
+\textit{backward \& forward traceability} nach ANSI/IEEE Std 830-1984 (M. \ref{resrc:1}, S. 532)
+\\Triviale bi-direktionale Artefakt-Quellen Beziehung.
+
+
+\item
+\textit{horizontal \& vertical traceability} nach Ramesh und Edwards (M. \ref{resrc:1}, S. 533)
+\\Unterscheidet Spuren nach Entwicklungsphase und Abstraktionsebne, wobei \textit{horizontal traceability} Spuren \textbf{innerhalb} einer Phase oder Abstraktionsebene beinhaltet, \textit{vertical traceability} Spuren zwischen Phasen oder Abstraktioneben. 
+\\\textbf{Achtung:} Es ist unklar ob sich Spuren wirklich so unterscheiden lassen, oder ob sich die horizontalen und vertikalen Dimensionen auf die iterativen und inkrementellen Phasen abbilden lassen.
+
+\end{itemize}
+
+
+%======================================================================
+
+\subsection{traceability in MDE}
+\begin{itemize}
+
+\item 
+\textit{traceability} in MDE $\approx$ \textit{traceability} in Softwarearchitektur/-engineering
+\\mit dem Unterschied, dass MDE sehr automatisiert ist. (M. \ref{resrc:1}, S. 533)
+
+\item
+\textit{''the 'MDD way' ''}: definiere Modelle und Metamodelle, die kontextgebunden \textit{traceability} für den gegebenen Kontext beschreiben (M. \ref{resrc:1}, S. 533)
+
+\item
+\textit{traceability} nach OMG (M. \ref{resrc:1}, S. 533f):
+\textit{''A trace [...] records a link between a group of objects from the input models and a group of objects in the output models. This link is associated with an element from the model transformation specification that relates the groups concerned.''}
+\newline
+\textbf{Achtung:} Betrachtet \textit{traceability} und \textit{traces} nur als Nebenprodukte von (automatischen) Modelltransformationen.
+
+\item
+\textit{traceabiltiy} nach Paige et al (M. \ref{resrc:1}, S. 534):
+\textit{''[...] the ability to chronologically interrelate uniquely
+identifiable entities in a way that matters. [...] [It] refers
+to the capability for tracing artifacts along a set of
+chained [manual or automated] operations.''}
+\newline
+\textbf{Achtung:} Schließt schließt zwar manuelle Modelltransformationen ein, , betrachtet allerdings nur sequenzielle Transformationen.
+
+\item
+\textit{traceability} nach Aizenbud-Reshef et al (M. \ref{resrc:1}, S. 534):
+\textit{''
+any relationship that exists between artifacts involved
+in the software-engineering life cycle. This definition
+includes, but is not limited to the following:
+\begin{itemize}
+\item
+Explicit links or mappings that are generated as a
+result of transformations, both forward (e.g., code
+generation) and backward (e.g., reverse engineer-
+ing)
+\item
+Links that are computed based on existing informa-
+tion (e.g., code dependency analysis)
+\item
+Statistically inferred links, which are links that are
+computed based on history provided by change
+management systems on items that were changed
+together as a result of one change request.
+\end{itemize}
+''}
+\newline
+Erlaubt manuelle und automatische Transformationen, \textit{traces} werden allerdings nicht auf Nebenprodukte von Modelltransformationen beschränkt.
+
+\item
+\textit{pre-, intra- \& post-model traceability} (M. \ref{resrc:1}, S. 534):
+\begin{itemize}
+\item
+\textbf{pre}-model \textit{traceybility}: 
+Verfolgbarkeit zwischen ''frühen'' Artefakten (Vision, Notizen, etc.) und dem ersten Modell
+\item
+\textbf{intra}-model \textit{traceybility}:
+Verfolgbarkeit zwischen Ergebnissen von Modelltransformationen in der Entwicklungsphase.
+\item
+\textbf{post}-model \textit{traceybility}:
+Verfolgbarkeit zwischen dem finalen Modell und anderen Nichtmodell-Artefakten.
+\end{itemize}
+
+\item
+\textit{explicit \& implicit traceability links} (M. \ref{resrc:1}, S. 534):
+\begin{itemize}
+\item nach Paige et al: 
+\\\textit{\textbf{explicit} traceability links} sind syntaktischer Teil des Modells,
+\\\textit{\textbf{implicit} traceability links} entstehen durch Anwendung von Modell-Management-Operationen
+\item nach Philippow und Riebisch:
+\\\textit{\textbf{explicit} traceability links} sind (wie bei Paige et al) syntaktischer Teil des Modells,
+\\\textit{\textbf{implicit} traceability links} sind gleiche (gleich benamte) Verbindungen in verschiedenen Modellen
+\end{itemize}
+
+
+\end{itemize}
+
+%======================================================================
+
+
+
